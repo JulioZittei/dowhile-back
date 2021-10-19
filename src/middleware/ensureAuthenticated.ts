@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from "express";
 import {verify} from "jsonwebtoken";
-import { CreateMessageService } from "../services/CreateMessageService";
 
 interface IPayload {
   sub: string

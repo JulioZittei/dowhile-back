@@ -1,6 +1,6 @@
 import prismaClient from "../prisma";
 
-class GetLast3MessageService {
+class GetMessagesService {
   async execute() {
     const messages = await prismaClient.message.findMany({
       take: 3,
@@ -16,4 +16,4 @@ class GetLast3MessageService {
   }
 }
 
-export {GetLast3MessageService}
+export {GetMessagesService}

@@ -26,12 +26,41 @@ This project was developed with the following technologies:
 > Note: In this project we have OAuth authentication with GitHub
 
 - Clone the repository and access the folder;
-- Copy the `.env.example` file to `.env` and fill it in with your GitHub credentials;
+- Copy the `.env.example` file to `.env` and fill it in with your GitHub credentials and JWT secret;
+- If you intend to run it locally, you can use **SQLite** and you keep the configuration `schema.prisma` file like this:
+
+```
+datasource db {
+  provider = "sqlite"
+  url = "file:./dev.db"
+}
+```
+
+- If you intend to use a database like **PostgreSQL**, you can keep the configuration `schema.prisma` file like this:
+
+```
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+```
+
+> Note: If you use a cloud-hosted database for development, you need to create the shadow database manually.
+
+```
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+```
+
 - Install the dependencies with `yarn`;
 - Run the migrations with `yarn prism migrate dev`;
 - Start the server with `yarn dev`;
 
 The application can be accessed at [`localhost:4000`](http://localhost:4000).
+You can access the live web aplication [`clicking here`]().
 
 ## 📄 License
 

@@ -60,7 +60,7 @@ datasource db {
 - Start the server with `yarn dev`;
 
 The application can be accessed at [`localhost:4000`](http://localhost:4000).
-You can access the live web aplication [`clicking here`]().
+You can access the live web application [`clicking here`]().
 
 ## 📄 License
 

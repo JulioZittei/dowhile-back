@@ -1,10 +1,11 @@
 {
-  "name": "dowhile_back",
+  "name": "dowhile-back",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --exit-child src/server.ts"
+    "dev": "ts-node-dev --exit-child src/server.ts",
+    "start": "node src/server"
   },
   "dependencies": {
     "@prisma/client": "^3.3.0",
